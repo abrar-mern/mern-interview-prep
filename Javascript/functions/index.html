@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Based Scenarios</title>
+</head>
+<body>
+    <script>
+             
+
+        // Function Statement
+        function greet(){
+            console.log("Hello World")
+        }
+        // greet();
+
+        // Function Expression
+        var greet2 = function(){
+            console.log("Bye World")
+        }
+        // greet2();
+
+        // Function Declaration same as Function Statement
+
+        // Anonymous Function
+        // function(){
+        //     console.log("I am Anonymous")
+        // }
+
+        // Named Function
+        var namedFunction = function named(){
+            console.log("I am Named Function")
+        }
+        // namedFunction();
+
+        // Parameter and Arguments
+        var b = function(param1, param2){
+            console.log("Parameter 1 :", param1)
+            console.log("Parameter 2 :", param2)
+        }
+        // b(1,20)
+
+        // We are tring to acess one function inside another function
+       var b = function(param1){
+        console.log(param1)
+       } 
+       b(function(){
+        console.log("I am a function inside a function")
+       })
+    //    console.log(b());
+
+       // return from another function
+       function createMultipler(multipler){
+        return function(num){
+            return num * multipler;
+        }
+
+       }
+    //    const double = createMultipler(5);
+    //      console.log(double(10))
+
+
+       </script>
+</body>
+</html>

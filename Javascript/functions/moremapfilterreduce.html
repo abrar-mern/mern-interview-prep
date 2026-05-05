@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Map Filter and Reduce</title>
+    </head>
+    <body>
+        <script>
+            const user = [
+                {firstName : "Abrar", lastName : "Khan", age : 27},
+                {firstName : "Shubham", lastName : "Lingayat", age : 24},
+                {firstName : "Atish", lastName : "Kamble",age:27},
+                {firstName:"Pranali",lastName:"Ture",age:40}
+            ];
+            //List full names
+            
+            const fullNames = user.map(function(x){
+                return x.firstName + " " + x.lastName
+            })
+
+            console.log(fullNames);
+
+            // Calculate how many person have the same age
+            // {27:3,24:1}
+
+            const sameAge = user.reduce(function(acc,curr){
+                if(acc[curr.age]){
+                    acc[curr.age] = ++acc[curr.age]
+                }
+                else{
+                    acc[curr.age] = 1
+                }
+                return acc
+            })
+            console.log(sameAge);
+
+            // First Name of all the user whose age is less than 30
+            const filterAge = user
+            .filter(function(x){
+                return x.age>30
+            })
+            .map(function(x){
+                return x.firstName
+            })
+            console.log("Age is greater than 30",filterAge)
+
+            // First Name of all the user whose age is less than 30 (using reduce function)
+            const reduceAge = user.reduce(function(acc,curr){
+                if(curr.age>30){
+                    acc.push(curr.firstName)
+                }
+                return acc
+            },[])
+            console.log(reduceAge)
+
+        </script>
+    </body>
+</html>

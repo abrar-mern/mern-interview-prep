@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+     function x(param1){
+        console.log("I am x function")
+        param1()
+     }
+     x(function y(){
+        console.log("I am y function")
+     });
+
+    // IIFE (Immediate Invoke Function Expression)
+     
+   (function chai(){
+     console.log(`Database is connected`)
+    })();
+
+    ((name)=> {
+        console.log(`I am an arrow function IIFE used by ${name}`)
+    })('abrar');
+
+
+    function calculateTotal(price, taxRate){
+      let total =  price + taxRate
+      console.log(`Total price is ${total}`)
+    }
+
+   // calculateTotal(22,20)
+
+
+   let tax = 0.1
+   function calculateTotalTax(price){
+   console.log("Calculating...")// Side Effect
+   return price + (price/tax)
+}
+// calculateTotalTax(100)
+
+
+// Closures Example
+
+function x(){
+   let a = 10
+   function y(){
+      console.log(a)
+   }
+   return y
+}
+let z = x()
+z();
+
+   </script> 
+</body>
+</html>

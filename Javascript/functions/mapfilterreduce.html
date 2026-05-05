@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Map Filter and Reduce Fucntion</title>
+  </head>
+  <body>
+    <script>
+      // Double and triple the values of an array
+      let arr = [2, 3, 1, 4];
+      function double(num) {
+        return num * 2;
+      }
+      function triple(num) {
+        return num * 3;
+      }
+      const output = arr.map(double);
+      const tripleoutput = arr.map(triple);
+      console.log("Double the value", output);
+      console.log("Triple the value", tripleoutput);
+
+      // Convert to binary
+      let notBinary = [2, 4, 5, 1];
+      const convertBinary = notBinary.map(binaryFunction);
+      function binaryFunction(x) {
+        return x.toString(2);
+      }
+      console.log("Binary Number", convertBinary);
+
+      // Filter
+      // 1.) Filter the odd nos
+      const num = [1, 2, 3, 4, 5, 6];
+      function isOdd(num) {
+        return num % 2 !== 0;
+      }
+      const filterOdd = num.filter(isOdd);
+
+      console.log("Odd Number are ",filterOdd);
+
+      // Reduce Functions
+      const add = [5,4,3,2]
+      const addOutput = add.reduce(function(acc,curr) {
+        acc = acc + curr
+        return acc;
+      },0);
+      console.log("Add using current and accumulator",addOutput)
+
+      // Reduce Function - Find Max Number
+      const numb = [1,2,4,60,100]
+      const findMaxNumber = numb.reduce(function(max,curr){
+        if(curr>max){
+          max = curr
+        }
+        return max;
+      },0)
+
+      console.log(findMaxNumber);
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Set Method</title>
+    </head>
+    <script>
+       const arr = [1,2,3,4,5]
+       const set = new Set(arr)
+       // Add set Items
+       set.add({name:"Khan"})
+       // Delete Items
+       set.delete(5)
+       // Has Items
+       console.log(set.has(2))
+       // Clear Item
+    //    set.clear()
+        // Size
+        console.log(set.size)
+       console.log([...set])
+    </script>
+</html>

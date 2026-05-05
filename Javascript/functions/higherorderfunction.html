@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+<body>
+    <script>
+        // Calculate area of a circle
+        const radius = [2, 3, 1, 4]
+        const calculateArea = function(radius){
+           const output = []
+           for (let i=0;i<radius.length;i++){
+             output.push (Math.PI * radius[i] * radius[i])
+           }
+           return output
+        }
+        console.log("Area of cirlce")
+        console.log(calculateArea(radius))
+
+        // Calculating circumference of a circle
+        const calcualteCircumference = function(radius){
+           const output = []
+           for (let i=0;i<radius.length;i++){
+             output.push (Math.floor(2 * Math.PI * radius[i]))
+           }
+           return output
+        }
+        console.log("Circumference of cirlce")
+        console.log(calcualteCircumference(radius))
+
+
+         // Calculating diameter of a circle
+        const calcualateDiameter = function(radius){
+           const output = []
+           for (let i=0;i<radius.length;i++){
+             output.push (Math.floor(2 * radius[i]))
+           }
+           return output
+        }
+        console.log("Diameter of cirlce")
+        console.log(calcualateDiameter(radius))
+
+
+        // Dynamic Code
+        const rad = [2, 3, 1, 4]
+
+        const area = function (rad){
+            return Math.PI * rad * rad;
+        }
+
+        const circumference = function(rad){
+            return (2 * Math.PI * rad)
+        }
+
+        const diameter = function(rad){
+            return (2 * rad)
+        }
+
+        const calculate = function(rad,logic){
+            const newOutput = []
+            for (let i = 0; i<rad.length;i++){
+                newOutput.push(logic(rad[i]))
+            }
+            return newOutput
+        }
+        console.log(calculate(rad,area))
+        console.log(calculate(rad,circumference))
+        console.log(calculate(rad,diameter))
+
+    </script>
+</body>
+</html>
