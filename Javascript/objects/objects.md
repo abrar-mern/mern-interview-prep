@@ -3,6 +3,8 @@ Answer - An object is defined by curly braces {}. Inside we define a key and the
 Properties - are the variables attached to the object
 Methods - Methods are the function attached to the object
 
+-------------------------------------------------------------------------------------------
+
 2.) What are the different methods to create an object?
 Answer - There are many methods to create an object it depends ont he usecases
 
@@ -79,7 +81,75 @@ let standardMember = {
 const premiumMember = Object.assign(baseMember,standardMember)
 console.log(premiumMember.price)
 
+-------------------------------------------------------------------------------------------
+
 
 
 3.) Whats the difference between Object.keys,values and entries ?
 Answer - 
+Object.keys - This will return the array of keys
+
+let person = {
+    name : "Abrar",
+    age : 27,
+    status : "Working"
+}
+console.log(Object.keys(person))
+
+Object.values - This will return the array of values
+
+let person = {
+    name : "Abrar",
+    age : 27,
+    status : "Working"
+}
+console.log(Object.values(person))
+
+Output - [ 'Abrar', 27, 'Working' ]
+
+Object.entries - This will return the array of key value pairs.
+
+let person = {
+    name : "Abrar",
+    age : 27,
+    status : "Working"
+}
+console.log(Object.entries(person))
+
+[ [ 'name', 'Abrar' ], [ 'age', 27 ], [ 'status', 'Working' ] ]
+
+
+-------------------------------------------------------------------------------------------
+
+4.) What is Object.freeze() ?
+Answer - Object.freeze is immutable we cannot change the properties and methods in it or we cannot reassign the value.
+
+For eg : - 
+const person = {
+    name : "Ankur",
+    age : 28
+}
+
+console.log(Object.freeze(person))
+person.status = 'Working'
+
+Note : - Here we cannot print status as we have used Object.freeze()
+
+-------------------------------------------------------------------------------------------
+
+5.) What is Object.seal() ?
+Answer - Object.seal we cannot add the properties and methods but we can reassign the values
+
+For eg : -
+const person = {
+    name : "Khan",
+    age : 27
+}
+
+console.log(Object.seal(person))
+person.age = 25
+console.log(person)
+
+Note : - The value are mutuable means the values can be reassigned
+
+-------------------------------------------------------------------------------------------
