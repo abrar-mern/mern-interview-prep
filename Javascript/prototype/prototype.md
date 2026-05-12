@@ -12,5 +12,6 @@ here arr.__proto__ is equal to Array.prototype
 ** When we start javascript engine memory create master objects like 
 a.) Object Master
 b.) Array Master
+c.) Function Master
 
 and after that arr.__proto.__proto__ = Object.prototype
