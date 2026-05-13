@@ -9,6 +9,7 @@ Whereas Typescript is staticall typed language where it check all the types duri
 2.) What is Compile Time and Run Time Environment ?
 
 Answer - Javascript first parses the source code to check if there is any syntax errors then it uses JIT(Just In Time) Compiler to convert that code into machine understandable bytecode. Finally the code executed within a run time that is browser or Node.js  which provide necessary API to manage the program's flow
+
 -------------------------------------------------------------------------------------------
 
 3.) What are the different datatypes in javascript ?
