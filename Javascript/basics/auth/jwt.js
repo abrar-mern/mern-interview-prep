@@ -16,18 +16,30 @@ const base64UrlEncode = (obj) => {
 };
 
 // 2. Base64Url Decode
-const base64UrlDecode = (str) => Buffer.from(str, 'base64').toString();
+const decodingbase64url = (str) => {
+    const replacedStr = str
+      .replace(/-/g, '+') 
 
+        .replace(/_/g, '/');
+    
+    const buffer = Buffer.from(replacedStr,'base64');
+    const jsonStr = buffer.toString('utf-8');
+    return JSON.parse(jsonStr)
+}
 // 3. Create HMAC SHA256 Signature
-const createSignature = (header, payload, secret) => {
-    return crypto
-        .createHmac('sha256', secret)
-        .update(`${header}.${payload}`)
-        .digest('base64')
-        .replace(/\+/g, '-')
+const createSignature = (header,payload,secret) => {
+    const dataToSign = `${header}.${payload}`
+    const signature = crypto
+    .createHmac('sha256',secret)
+    .update(`${dataToSign}`)
+    .digest('base64')
+    .replace(/\+/g, '-')
         .replace(/\//g, '_')
         .replace(/=/g, '');
-};
+        
+        
+        return signature;
+}
 
 // --- GENERATOR (Run this to get your Postman token) ---
 const header = { alg: "HS256", typ: "JWT" };
@@ -53,7 +65,7 @@ console.log("--------------------------------------------------");
 const server = http.createServer((req, res) => {
     const authHeader = req.headers['authorization'];
     const token = authHeader && authHeader.split(' ')[1];
-
+    
     if (!token) {
         res.writeHead(401);
         return res.end("No token provided");
@@ -90,7 +102,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ 
         status: "Success", 
-        message: "Welcome Abrar! You are authorized.",
+        message: `Welcome ${decodedPayload.username}! You are authorized.`,
         data: decodedPayload 
     }));
 });
