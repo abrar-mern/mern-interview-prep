@@ -136,3 +136,38 @@ function displayPerson({name,lastName,age,job="unemployed"}){
 }
 displayPerson(person2)
 
+
+-------------------------------------------------------------------------------------------
+
+7.) What is an slice ?
+Answer - If we want to create an array that is an subset of an existing array without changing the original array.
+
+In short I mean to say it ised to extract the portion in an array and create a new array out of it
+
+Fo eg : - 
+let arr = [1,2,3,4]
+let newArr = arr.slice(0,3);
+console.log(newArr);
+console.log(arr);
+
+-------------------------------------------------------------------------------------------
+
+8.) What is splice ?
+Answer - If we want to add/delete/replace exisiting element in an arry then we use splice
+and give new array as well
+
+For eg : - 
+
+let arr = [1,3,5,7,9,11];
+
+<!-- arr.splice(startingIndex,countofItemtoReplace,replacingelement) -->
+
+let newArr = arr.splice(1,4,2,4,6,8);
+
+console.log(arr)
+
+Output - 
+arr - [ 1, 2, 4, 6, 8, 11 ]
+newArr - [ 3, 5, 7, 9 ]
+
+-------------------------------------------------------------------------------------------
