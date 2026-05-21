@@ -10,8 +10,8 @@ function x(){
     return y
 }
 
-let z = x();
-z();
+// let z = x();
+// z();
 
 
 // Example 2
@@ -30,4 +30,21 @@ function z(){
     x();
        
 }
-z()
+// z()
+
+
+// Understanding event listeener with closure
+
+// Count of how many times btn is clicked
+
+
+function checkCount(){
+    let count = 0
+    if(count<=0){
+        console.log('User have not clicked on the button')
+    }
+    document.getElementById('btn-click').addEventListener('click', function(){
+        console.log(`User have clicked the button ${++count} times`)
+    })
+}
+checkCount()
