@@ -15,6 +15,13 @@ c.) Both provide same methods : -
 
 2.) What is the difference between indexdb and session storage ?
 Answer - Indexdb
-a.) indexdb is used to store large amount of data
-b.) It uses object oriented structure model
-c.) Persist data beyind the duration of page session
+a.) It is used to store large amount of structured data
+b.) It uses object orientted storage model
+c.) It persists data beyond the duration of the page sesssion
+
+Session Storage - 
+a.)It have limited storage around 5mb of data
+b.) It stores the data in simple key-value pairs and stores only strings
+c.) Available only the duration of the page session.
+
+-------------------------------------------------------------------------------------------
