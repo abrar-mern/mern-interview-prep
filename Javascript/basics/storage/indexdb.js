@@ -8,17 +8,17 @@ openRequest.onsuccess = (e) => {
     let storeObject = transaction.objectStore("students");
 
     // Add Values
-    // let request = storeObject.put({
-    //     id : "3",
-    //     name : "Rahul",
-    //     email : "rahul@gmail.com"
-    // })
+    let request = storeObject.put({
+        id : "3",
+        name : "Rahul",
+        email : "rahul@gmail.com"
+    })
 
     // Get Values
     // let request = storeObject.getAll(IDBKeyRange.bound("2","3"))
 
     // Delete 
-    let request = storeObject.delete("3");
+    // let request = storeObject.delete("3");
 
 
     request.onsuccess = (e) => {
