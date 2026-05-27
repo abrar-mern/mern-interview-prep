@@ -85,3 +85,50 @@ Note : - Local storage follows the same origin policy
 a.) Protocol - http or https
 b.) Host - Domain i.e paytm.com / amazon.com
 c.) Port - 8080/8081
+
+-------------------------------------------------------------------------------------------
+
+14.) I create a session storage and close the browser and re-opened it and restored tab. Will session data persists ?
+Answer - No session storage does not persist if I close the browser or reopen it.
+
+-------------------------------------------------------------------------------------------
+
+15.) Can I acess the session storage in another tab on the same browser ?
+Answer - No you cannot acess the session storage in a nother tab of the same browser
+
+-------------------------------------------------------------------------------------------
+
+16.) I reloaded the page after creating session storage will the data persit?
+Answer - Yes session storage data persist even after the page relaod.
+
+-------------------------------------------------------------------------------------------
+
+17.)If I open multiple tabs with same url how session storage behaves ?
+Answer - We cannot acess session storage in multiple tabs even if the same url
+
+-------------------------------------------------------------------------------------------
+
+18.) When session storage data will be removed ?
+Answer - Once tab is closed or session expires then session storage will be deleted
+
+-------------------------------------------------------------------------------------------
+
+19.) Is session storage synchronous or asynchronous ?
+Answer - Session storage is synchronous because it blocks the execution of the code until the current program is executed.
+
+-------------------------------------------------------------------------------------------
+
+20.) I want asynchronous operation and large data sets to be stored then what will you suggest ?
+Answer - I can go with indexdb where asynchornous operations are supported and we can go with large data sets
+
+-------------------------------------------------------------------------------------------
+
+21.) What is the max storage of session storage ?
+Answer - The max storage of session storage is 5mb.
+
+-------------------------------------------------------------------------------------------
+
+22.) I will try to store lets say an an image which is around 5mb in localstorage then what happens ?
+Answer - It will throw QuotaExceedException if it exceeds the limit.
+
+-------------------------------------------------------------------------------------------
