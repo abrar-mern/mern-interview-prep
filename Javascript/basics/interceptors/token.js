@@ -1,5 +1,6 @@
 const originalFetch = window.fetch;
-const token = 'abc123'
+
+const token = 'spa123'
 
 window.fetch = async function (...args){
     if(!args[1]){
@@ -9,11 +10,11 @@ window.fetch = async function (...args){
         args[1].headers = {}
     }
     args[1].headers.Authorization = `Bearer ${token}`
-    console.log('Modified args', args);
+    console.log('Modifed args', args);
     return originalFetch(...args)
 }
 
 fetch("https://httpbin.org/headers")
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(err => console.log(err));
+.then(res => res.json())
+.then(data => console.log(data))
+.catch(err => console.log(err))
