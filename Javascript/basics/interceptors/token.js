@@ -1,6 +1,6 @@
 const originalFetch = window.fetch;
 
-const token = 'spa123'
+const token = 'sha256'
 
 window.fetch = async function (...args){
     if(!args[1]){

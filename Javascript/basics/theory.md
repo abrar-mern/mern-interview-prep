@@ -2,7 +2,7 @@
 
 Answer - Javascript is a dynamically typed language. It means all checks are done at run time when program is executed.
 So we can assign anything to the variable and its work fine. 
-Whereas Typescript is staticall typed language where it check all the types during compile time.
+Whereas Typescript is statically typed language where it check all the types during compile time.
 
 -------------------------------------------------------------------------------------------
 

@@ -9,5 +9,3 @@ Response Interceptor - while on the other handled it handles incomng data liek p
 In production app we will use request interceptor to enure every request is proeorly authenticated and we will use response interceptor to handle the global errors and format data consistenly.
 
 ---------------------------------------------------------------------------------
-
-3.) 
