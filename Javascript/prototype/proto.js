@@ -26,11 +26,12 @@ Object.setPrototypeOf(TASupport,TeachingSupport)
 
 
 
-let myName = 'Abrar  '
-console.log(myName.length);
+let myName = 'Abrar     ';
+// console.log(myName.length);
 
-Object.prototype.calLength = function(name) {
-    return `${this.trim().length}`
+Object.prototype.removeExtraSpaces = function(){
+    console.log(`${this}`)
+    console.log(`${this.length}`)
+    console.log(`${this.trim().length}`)
 }
-console.log(myName.calLength());
-
+myName.removeExtraSpaces();
