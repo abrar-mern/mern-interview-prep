@@ -1,41 +1,39 @@
-// document.cookie = 'name=Abrar;expires = Saturday 30 May 2026 12:0:00 UTC,path=./'
+const cookie = document.cookie = 'name=khan;expires=Thursay 11 June 2026 UTC'
+// console.log(cookie)
 
-
-function setCookie(name, value, daystoExpire) {
+function createCookie(name,value,daystoexpire){
   const date = new Date();
-  date.setTime(date.getTime() + (daystoExpire + 24 * 60 * 60 * 1000));
-  const expiry = "expires=" + date.toUTCString();
-  document.cookie = `${name}=${value};${expiry}`;
+  date.setTime(date.getTime() + (daystoexpire * 24 * 60 * 60 * 1000));
+  const expiry = `expires= ${date.toUTCString()}`
+  document.cookie = `${name}=${value};${expiry}`
 }
-setCookie("email", "abc@gmail.com", 2);
+createCookie('laptop','Macbook',3)
 
-// Delete Cookie
-
-function deleteCookie(name) {
+function deleteCookie(name){
   const looseWatch = new Date();
   looseWatch.setTime(0);
-  document.cookie = `${name}=;expires=${looseWatch.toUTCString()}`;
+  document.cookie= `${name}=;expires=${looseWatch.toUTCString()}`
 }
+// deleteCookie('laptop');
 
-deleteCookie("email");
-
-// GetCookie
-function getCookie(name) {
-  const cookieName = name + "=";
-  const cookieArray = document.cookie.split(";");
-  for (let i = 0; i < cookieArray.length; i++) {
-    let cookie = cookieArray[i];
-    cookie = cookie.trim();
-    if (cookie.indexOf(cookieName)== 0) {
-        return cookie.substring(cookieName.length,cookie.length)
+function fetchCookie(key){
+  const cookieName =  `${key}=`;
+  // console.log(cookieName)
+  const cookieArray = document.cookie.split(';');
+  // console.log(cookieArray);
+  for(let i=0; i<cookieArray.length;i++){
+    const cookie = cookieArray[i]
+    // console.log(cookie)
+    const cookietrim = cookie.trim()
+    // console.log(cookietrim)
+    if(cookietrim.indexOf(cookieName) == 0){
+      return cookietrim.substring(cookieName.length,cookietrim.length)
     }
   }
-  return null;
+   return null;
+  
 }
-
-
-const getCookie1 = getCookie("surname");
-console.log(getCookie1)
+console.log(fetchCookie('laptop'))
 
 // Event Listener
 
@@ -44,12 +42,26 @@ const lastName = document.querySelector('#lastText');
 const submitBtn = document.querySelector('#submitbtn');
 const cookieBtn = document.querySelector('#cookiebtn');
 
-submitBtn.addEventListener('click', () => {
-    setCookie("firstName",firstName.value,2)
-    setCookie("lastName",lastName.value,2)
-});
+submitBtn.addEventListener('click',()=>{
+  createCookie('firstName',firstName.value,2)
+  console.log('hi')
+  createCookie('lastName',lastName.value,2)
+})
 
-cookieBtn.addEventListener('click', () => {
-    firstName.value = getCookie("firstName")
-    lastName.value = getCookie("lastName")
-});
+cookieBtn.addEventListener('click', ()=> {
+  firstName.value = fetchCookie("firstName")
+  lastName.value = fetchCookie("lastName")
+})
+
+
+
+// submitBtn.addEventListener('click', () => {
+//     setCookie("firstName",firstName.value,2)
+//     setCookie("lastName",lastName.value,2)
+// });
+
+// cookieBtn.addEventListener('click', () => {
+//     firstName.value = getCookie("firstName")
+//     lastName.value = getCookie("lastName")
+// });
+

@@ -1,23 +1,21 @@
 document.cookie = 'name=AbrarKhan; expires = Friday 30 May 2026 12:0:00 UTC; path=./'
 document.cookie = 'lastName=Babulkidua; expires = Friday 30 May 2026 12:0:00 UTC; path=./'
 
-
-
 // const date = new Date();
 // console.log(date);
 // console.log(typeof date);
 
-setCookie("email","abc@gmail.com",3);
+createCookie("email","abc@gmail.com",3);
 
 // Create Cookie
-function setCookie(name,value,daystoexpire){
+function createCookie(name,value,daystoexpire){
     const date = new Date();
     date.setTime(date.getTime() + (daystoexpire * 24 * 60 * 60 * 1000));
-    let expiry= "expires:" + date.toUTCString();
+    let expiry= "expires=" + date.toUTCString();
     document.cookie = `${name}=${value};${expiry}`
 }
 
-setCookie("gaon","delhi",2);
+createCookie("gaon","delhi",2);
 
 // Delete Cookie
 function deleteCookie(name){
