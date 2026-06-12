@@ -68,7 +68,7 @@ stack for speed and connected with the variable name in this manner non primptiv
 As object size can be from 1mb - 100mb but the adress value is of 64bits
 
 -------------------------------------------------------------------------------------------
-
+    
 4.) What is Hoisting in javascript ?
 Answer - In javascript variables and functions can be accessed even before declaring it as javascript compiler moves all
 the declarations of variables and functions on the top so there will not be an error. This is called hoisting
