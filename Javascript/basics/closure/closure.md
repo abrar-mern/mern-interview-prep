@@ -1,5 +1,5 @@
 1.) What is a closure ?
-Answer - A function bind or bundeld together with its lexical scope is called a closure
+Answer - A function bind or bundled together with its lexical scope is called a closure
 
 function x(){
     var a = 7;

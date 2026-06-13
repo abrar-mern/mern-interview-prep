@@ -1,64 +1,56 @@
-"use strict"
-
-// this in global space
-console.log(this) // global object - window object
+'use strict'
+// Global Space
+console.log(this); // It represents the global object i.e window object
 
 // this inside a function
 function x(){
-    console.log(this);
+    // The value depends on strict or non-strict mode
+    console.log(this)
 }
-x(); // undefined or null
-window.x(); // window
+
+// this keyword depends on how the function is called
+window.x()
+
+// If the value is undefined or null it will be replaced by global object only in non-strict mode
 
 // this inside a object method
-const obj = {
-    a : 10,
-    x : function(){
-        console.log(this.a)
-    }
-}
 
-obj.x();
-
-// this inside call, apply or bind method
 const student = {
-    name : "Vaibhav",
+    // Here this referes to the object name
+    name : 'Abrar',
     printName : function(){
         console.log(this.name)
-    }
+    } 
 }
-
 student.printName();
 
 const student2 = {
-    name : "Abrar",
+    name : 'Sahil'
 }
-student.printName.call(student2);
+student.printName.call(student2)
 
 // this inside arrow function
-
-const obj1 = {
-    a : 10,
+// As arrow function does not have a this reference so it takes the refence from it enclosing lexical scope
+const arrowthis = {
+    name : 'Rahul',
     x : () => {
+        console.log(this)
+    },
+    y : () => {
         console.log(this)
     }
 }
-obj1.x();
+arrowthis.y();
 
-// this inside nested arrow function
 
-const obj2 = {
-    a : 30,
-    x : function(){
-        // enclosing lexical object
+// second example
+const arrowfn = {
+    name : 'Pandu',
+    x : function (){
         const y = () => {
-            console.log(this)
+             console.log(this)
         }
-        y();
+        y()
     }
 }
-
-obj2.x();
-
-
-// this inside a DOM elemnent = html element
+arrowfn.x();
