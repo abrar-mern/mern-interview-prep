@@ -1,5 +1,5 @@
 1.) What is an promise ?
-Answer - Promise is an object that represent the eventual completion or failure of the asynchornous operation. internally it tracks 2 vital proeprties that we cannot acess directly via code
+Answer - Promise is an object that represent the eventual completion or failure of the asynchronous operation. internally it tracks 2 vital properties that we cannot acess directly via code
 
 Promise Objects are immutable
 
@@ -46,6 +46,7 @@ createOrder(cart,function(orderId){
 })
 
 But after promise we use
+
 createOrder(cart){
     .then(function(orderId){
         return proceedTopayment(orderId)
