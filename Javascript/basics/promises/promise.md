@@ -12,7 +12,7 @@ b.) [[PromiseResult]] - The value contained in it (eventually it is undefined)
 Answer - There are 3 states in promises
 a.) Pending - Initial state the operation hasn't finished yet
 b.) Fulfilled - The operation ahs been succeed.
-c.) Rejected - The operation has failed and now promise has some reason(mianly it is an error)
+c.) Rejected - The operation has failed and now promise has some reason(mainly it is an error)
 
 -------------------------------------------------------------------------------------------
 
