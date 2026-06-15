@@ -26,12 +26,23 @@ Object.setPrototypeOf(TASupport,TeachingSupport)
 
 
 
-let myName = 'Abrar     ';
-// console.log(myName.length);
+// let myName = 'Abrar     ';
+// // console.log(myName.length);
 
-Object.prototype.removeExtraSpaces = function(){
+// Object.prototype.removeExtraSpaces = function(){
+//     console.log(`${this}`)
+//     console.log(`${this.length}`)
+//     console.log(`${this.trim().length}`)
+// }
+// myName.removeExtraSpaces();
+
+
+
+let myName = 'Abrar   '
+Object.prototype.removeExtraSpaces = function(name){
     console.log(`${this}`)
-    console.log(`${this.length}`)
     console.log(`${this.trim().length}`)
 }
-myName.removeExtraSpaces();
+// console.log(myName.trim().length)
+
+myName.removeExtraSpaces()
