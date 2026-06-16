@@ -11,5 +11,4 @@ Answer - Async and await are used to handle the promises
 3.) Await Keyword ?
 Answer - Awiat is a keyword that can be used only inside the async function
 
-
 -----------------------------------------------------------------------

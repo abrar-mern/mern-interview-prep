@@ -36,7 +36,7 @@ const p2 = new Promise((resolve,reject) => {
 
 const p3 = new Promise ((resolve, reject) => {
     setTimeout(() => {
-       resolve('Promise 3 is reolsved') 
+       resolve('Promise 3 is resolved') 
     }, 5000);
 }) 
 
