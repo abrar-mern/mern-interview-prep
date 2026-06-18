@@ -67,13 +67,13 @@ Ensure to return in promise chaining
 Answer - 
 a.) Promise.all
 We will wait for all the promises to succed or any of the promises to reject.
-The behaviour of this are ot will return an array only if all promises are in an fulfilled state if any one of the promises get rejected the whoel thing get failed
+The behaviour of this are we will return an array only if all promises are in an fulfilled state if any one of the promises get rejected the whole thing get failed
 
 b.) Promise.allsettled
 It waits for every promise to finish either success or failure.
 The behaviour is you get an array of object describing the outcome of each promise
 
-
+    
 c.) Promise.any
 The first success wins
 It will return if any of the promises are fullfilled it will ignore if promises are rejected unless if all the promises are rejected.

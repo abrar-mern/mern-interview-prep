@@ -8,3 +8,8 @@ It is directly dependent to lexical environment.
 Answer - Lexical environment is the local memory along with it lexical  environment of it parent
 
 --------------------------------------------------------------------------- 
+
+3.) What is scope chain ?
+Answer - The whole chain of lexical environemnt is called as scope chain
+
+--------------------------------------------------------------------------- 

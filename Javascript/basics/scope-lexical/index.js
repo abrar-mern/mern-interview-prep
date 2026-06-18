@@ -1,10 +1,10 @@
-function x(){    
-    var b = 10;  
-    y()
-    function y(){
-         console.log(`c value ${b}`)
+function a(){
+    var b = 10;
+    c()
+    function c(){
+        console.log(b)
     }
-    return y;
 }
-var z = x()
-z()
+
+a()
+console.log(`Global Scope`,b);
