@@ -85,8 +85,7 @@ javascript scan the code and check if there is any functions or variables in it
 -------------------------------------------------------------------------------------------
 
 5.) What is temporal dead zone ?
-Answer - It is a specific time period in the execution of the javascript code where the variables are assigned using let and 
-const and cannot be accessed until the value is assigned. Any attempt to this result to be in reference error   
+Answer - It is a specific time period in the execution of the javascript code where the variables are assigned using let and const and cannot be accessed until the value is assigned. Any attempt to this result to be in reference error   
 
 -------------------------------------------------------------------------------------------
 

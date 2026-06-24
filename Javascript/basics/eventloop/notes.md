@@ -12,7 +12,7 @@ Answer - Its job is to maintain all the callbacks function that need to be execu
 
 
 3.) What are microtask queue ?
-Answer - When working with promises we have to deal with micro task
+Answer - When    with promises we have to deal with micro task
 When the promises is resolved, rejected using .then() and catch() block callbacks are added to microqueue.
 It is given higher priority than callback/ macrotask queue 
 
