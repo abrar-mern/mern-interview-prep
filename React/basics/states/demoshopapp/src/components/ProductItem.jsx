@@ -4,13 +4,16 @@ import "./ProductItem.css"
 
 export const ProductItem = (props) => {
   function clickHandler(){
-    console.log('clicked')
+    console.log('clicked');
+  
   }
   return (
     <div className="product-item">
-      <h2 className="emp-name">{props.name}</h2>
+      
+      <h2 style={{ textAlign: 'left' }} className="emp-name">{props.name}</h2>
+      
       <ProductDate date={props.dob} />
-      <button onClick={clickHandler}>Add to Cart</button>
+      <button className = "addtocart-btn" onClick={clickHandler}>Add to Cart</button>
     </div>
   );
 };

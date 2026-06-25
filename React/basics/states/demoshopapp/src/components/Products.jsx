@@ -4,7 +4,7 @@ import { Card } from "./Card";
 
 export const Products = (props) => {
   return (
-    <div>
+
       <Card>
         <ProductItem
           name={props.items[0].name}
@@ -24,6 +24,5 @@ export const Products = (props) => {
           dob={props.items[2].dob}
         />
       </Card>
-    </div>
   );
 };

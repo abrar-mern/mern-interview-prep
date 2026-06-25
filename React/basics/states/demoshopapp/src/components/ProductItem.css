@@ -1,10 +1,22 @@
-.product-item{
+.product-item {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
-    border: 1px solid;
-    text-align: left;
-    border-radius: 4px;
-    margin-top: 10px;
     align-items: center;
+    border: 1px solid;
+    padding : 20px;
+    gap:4rem;
+}
+.emp-name {
+    min-width: 150px;
+    text-align: left;
+    margin: 0; /* Prevents default browser margins from messing up your vertical centering */
+}
+.addtocart-btn{
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;   
+    outline: none;
+    border-radius:5px;
+    cursor: pointer;
+    border: none;
 }
