@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.product-wrapper{
+    background-color: rgb(112, 163, 163);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

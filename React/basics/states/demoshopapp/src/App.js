@@ -1,5 +1,6 @@
 import React from "react";
 import { Products } from "./components/Products";
+import "./App.css"
 
 export const App = () => {
   const products = [
@@ -23,7 +24,7 @@ export const App = () => {
   },
 ]
   return (
-    <div>
+    <div className="product-wrapper">
         <Products items = {products} />
     </div>
   )
