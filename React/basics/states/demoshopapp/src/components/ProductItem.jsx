@@ -1,19 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { ProductDate } from "./ProductDate";
-import "./ProductItem.css"
+import "./ProductItem.css";
 
 export const ProductItem = (props) => {
-  function clickHandler(){
-    console.log('clicked');
   
+  const [name, setName] = useState(props.name)
+
+  function clickHandler() {
+    console.log("clicked");
+    setName("Abrar");
   }
+
   return (
     <div className="product-item">
-      
-      <h2 style={{ textAlign: 'left' }} className="emp-name">{props.name}</h2>
-      
+      <h2 className="emp-name">{name}</h2>
+
       <ProductDate date={props.dob} />
-      <button className = "addtocart-btn" onClick={clickHandler}>Add to Cart</button>
+      <button className="addtocart-btn" onClick={clickHandler}>
+        Add to Cart
+      </button>
     </div>
   );
 };
