@@ -37,3 +37,6 @@ setForm({
 })
 
 -----------------------------------------------------------------
+
+5.) How can we send the props from child to parent ?
+Answer - Uusing Lifting up
