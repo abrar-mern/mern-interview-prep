@@ -39,4 +39,6 @@ setForm({
 -----------------------------------------------------------------
 
 5.) How can we send the props from child to parent ?
-Answer - Uusing Lifting up
+Answer - Using Lifting up where we pass create function and pass through props from parent to child and send through props and in child component we call the props with prop name of that is passed in the parent.
+
+-----------------------------------------------------------------
