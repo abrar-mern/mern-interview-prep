@@ -1,15 +1,15 @@
 import React from "react";
 import { Card } from "./Card";
 
-export const Tours = ({ tours, removeTour }) => {
+export const Tours = ({ tours, removetour }) => {
   return (
     <div>
       <div>
-        <h2>Plan with Me</h2>
+        <h2>Plan with Abrar</h2>
       </div>
       <div>
         {tours.map((tour) => {
-          return <Card {...tour} removeTour={removeTour} ></Card>;
+          return <Card key={tour.id} {...tour} removetour = {removetour}></Card>;
         })}
       </div>
     </div>

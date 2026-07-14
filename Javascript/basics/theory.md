@@ -43,7 +43,7 @@ g.) Symbol - A unique identifier often used as object properties to avoid collus
 
 
 
-ii.) Non primptive Datatypes -  If it is not primptive means it is an object. An object is a collection of properties and are stored by reference means (it point to the location of the memory not the value it self)
+ii.) Non primptive Datatypes -  If it is not primptive means it is an object. An object is a collection of properties and are stored by reference means (it point to the location of the memory not the value it self)  
 
 a.) Object - The base of all complex data are stored in key value paris
    let user = {
