@@ -42,3 +42,15 @@ setForm({
 Answer - Using Lifting up where we pass create function and pass through props from parent to child and send through props and in child component we call the props with prop name of that is passed in the parent.
 
 -----------------------------------------------------------------
+
+6.) What are Hooks?
+Answer - Hooks is a special react function that used React features such as state, lifecycle behaviour, context and navigation.
+Hooks usually begin with use
+
+-----------------------------------------------------------------
+
+7.) How to minify your html ?
+Answer - Use npm run build then build will be generated then use cmd 
+npx server -s build
+
+-----------------------------------------------------------------

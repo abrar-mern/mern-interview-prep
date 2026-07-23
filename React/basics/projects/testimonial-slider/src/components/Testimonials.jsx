@@ -12,8 +12,6 @@ function rightShiftHandler(){
   setIndex((prevState) => prevState === reviews.length - 1 ? 0 : prevState + 1)
 }
 
-
-
   function supriseHandler() {
     const suprise = (Math.floor(Math.random() * reviews.length));
     setIndex(suprise)
